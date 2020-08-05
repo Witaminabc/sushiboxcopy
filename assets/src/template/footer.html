@@ -1,0 +1,73 @@
+<script>
+	
+
+</script>
+<script src="js/main.min.js"></script>
+
+<script>
+		var widthWindow2=window.outerWidth;
+	if(widthWindow2<720){
+		oki=false
+	}else{
+		oki=true
+	}
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+
+	if(oki){
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ) {
+    document.getElementById("menubar").style.padding = "30px 10px";
+    document.getElementById("menubar").style.fontSize = "25px";
+    document.getElementById("menubar").style.display = "none";
+    document.getElementById("menubartop").style.display = "inline-block";
+  } else {
+    document.getElementById("menubar").style.padding = "0px 0px";
+    document.getElementById("menubar").style.fontSize = "18px";
+    document.getElementById("menubar").style.display = "inline";
+    document.getElementById("menubartop").style.display = "none";
+    
+  }
+} else{
+		    scrollFunction2()
+		            	// document.getElementById("menubar4").style.display = "block";
+		            	
+ }
+}
+
+
+
+	$(window).resize(function(){scrollFunction2()});
+// ширина окна браузера
+function scrollFunction2() {
+
+var widthWindow = window.outerWidth;
+// alert(widthWindow);
+// высота окна браузера
+// var heightWindow = window.outerHeight;
+// document.getElementById("widthWindow").innerHTML = widthWindow;
+// document.getElementById("heightWindow").innerHTML = heightWindow;
+if( widthWindow<=720){
+	oki=false
+	document.getElementById("podval1").style.display = "none";
+	document.getElementById("podval2").style.display = "block";
+	document.getElementById("menubar").style.display = "none";
+    document.getElementById("menubartop").style.display = "none";
+    	document.getElementById("menubar4").style.display = "block";
+
+}else{
+	oki=true
+	document.getElementById("podval1").style.display = "inline";
+		document.getElementById("podval2").style.display = "none";
+document.getElementById("menubar").style.display = "inline";
+	document.getElementById("menubar4").style.display = "none";
+
+    // document.getElementById("menubartop").style.display = "inline-block";
+}
+}
+
+
+
+</script>
